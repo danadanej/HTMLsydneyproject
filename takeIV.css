@@ -1,0 +1,92 @@
+* {box-sizing: border-box;}
+
+
+
+/*Coding to go with three float boxes listed below in html*/
+.box {
+  float: left;
+  width: 33.3%;
+  padding: 50px;
+  flex-flow: row wrap;
+  border: 1px solid black;
+  align-content: space-around;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+/* Styles the bg color, font color and margin/padding of each div class: w3-third (add back in if border-box layout does not work.)
+.w3-third {
+  background-color: darkgreen;
+  color: beige;
+  margin: 20px;
+  padding: 20px;
+  max-width: 200px;
+  min-width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+Styles the bg color, font color and margin/padding of each div class: w3-third (add back in if border-box layout does not work.)*/
+
+
+
+
+.bg-img {
+  /* The image used */
+  background-image: url("./images/sydneyskyline.JPG");
+
+  min-height: 300px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #006400;  /* navbar background color: darkgreen */
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-shadow: 1px 1px 4px #000000; /* navbar font shadow: text-shado: 1px 1px 4px #000000; */
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f5f5dc;  /* hover background color - beige */
+  color: darkgreen; /* hover font color - darkgreen */
+}
+
+/*footer*/
+.footer {
+  position: fixed;
+  padding: 14px;
+  width: 100%;
+  background-color: darkgreen;
+  color: beige;
+  text-shadow: 1px 1px 4px #000000;
+  text-align: center;
+}

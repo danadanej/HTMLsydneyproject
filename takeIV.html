@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="takeIV.css">
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+
+/*Coding to go with three float boxes listed below in html*/
+.box {
+  float: left;
+  width: 33.3%;
+  padding: 50px;
+  flex-flow: row wrap;
+  border: 1px solid black;
+  align-content: space-around;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+/* Styles the bg color, font color and margin/padding of each div class: w3-third (add back in if border-box layout does not work.)
+.w3-third {
+  background-color: darkgreen;
+  color: beige;
+  margin: 20px;
+  padding: 20px;
+  max-width: 200px;
+  min-width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+Styles the bg color, font color and margin/padding of each div class: w3-third (add back in if border-box layout does not work.)*/
+
+
+
+
+.bg-img {
+  /* The image used */
+  background-image: url("./images/sydneyskyline.JPG");
+
+  min-height: 300px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #006400;  /* navbar background color: darkgreen */
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-shadow: 1px 1px 4px #000000; /* navbar font shadow: text-shado: 1px 1px 4px #000000; */
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f5f5dc;  /* hover background color - beige */
+  color: darkgreen; /* hover font color - darkgreen */
+}
+
+/*footer*/
+.footer {
+  position: fixed;
+  padding: 14px;
+  width: 100%;
+  background-color: darkgreen;
+  color: beige;
+  text-shadow: 1px 1px 4px #000000;
+  text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navbar on Image layout with links -->
+<h2>Welcome to Sydney</h2>
+<div class="bg-img">
+  <div class="container">
+    <div class="topnav">
+      <a href="#home">Home</a>
+      <a href="https://www.makemytrip.com/travel-guide/sydney/best-time-to-visit.html">Best Travel Time</a>
+      <a href="https://www.viator.com/Sydney-tours/Day-Trips/d357-g5-c15">Day Trips</a>
+      <a href="https://travel.usnews.com/Sydney_Australia/Things_To_Do/">Things to Do</a>
+      <a href="#about">About</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Coding to go with three float boxes listed above in html: Grid of boxes; float boxes side by side -->
+<div class="clearfix">
+  <div class="box" style="background-color:#f5f5dc">
+  <img class="img-responsive" src="images/sydneyoperahouseatnight.jpg" alt="Sydney Opera House" style="max-width: 100%">
+  </div>
+  <div class="box" style="background-color:#f5f5dc">
+  <img class="img-responsive" src="images/upatree.jpg" alt="Koala In Tree" style="max-width: 100%">
+  </div>
+  <div class="box" style="background-color:#f5f5dc">
+  <img class="img-responsive" src="images/sydneyharbourbridge_II.jpg" alt="Sydney Harbourbridge" style="max-width: 100%">
+  </div>
+</div>
+
+<!-- footer -->
+<footer>
+  <p>Posted by: Dana D. Johnson | Contact Information:<a href="mailto:johnson3925@gmail.com">
+  johnson3925@gmail.com | About</a></p>
+</footer>
+
+
+<p id="demo"></p>
+
+<script>
+  var d = new Date();
+  document.getElementById("demo").innerHTML = d;
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html>
